@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
@@ -77,3 +78,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# codeedu-laravel
+Repositório com o link da imagem docker
+
+## Resolução
+
+https://hub.docker.com/repository/docker/lira/laravel-exercicio
+>>>>>>> 0680a8cf549978f34ffe39d280616c47bf2fb951
