@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-alpine as builder
+FROM php:7.4-fpm-alpine
 
 WORKDIR /var/www
 
@@ -19,22 +19,14 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 RUN rm -rf /var/www/html
 
-COPY . /var/www
+# COPY . /var/www
 
-RUN composer install && \
-     php artisan key:generate && \
-     php artisan config:cache && \
-    chmod -R 777 storage
-
-RUN npm install
+# RUN composer install && \
+#     cp .env.example .env && \
+#     php artisan key:generate && \
+#     php artisan config:cache
 
 RUN ln -s public html
-
-FROM php:7.4-fpm-alpine
-
-RUN apk add --no-cache mysql-client
-
-RUN docker-php-ext-install pdo pdo_mysql
 
 EXPOSE 9000
 
